@@ -1,0 +1,10 @@
+openai
+streamlit
+langchain
+langchain_community
+langchain-openai
+pypdf
+faiss-cpu
+flask
+threading
+
