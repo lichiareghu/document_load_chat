@@ -1,107 +1,217 @@
-import os
-import shutil
-
-# import threading
 import streamlit as st
-from flask import Flask, request, jsonify
-from werkzeug.utils import secure_filename
-from config import Config
-
-from modules.upload_factory import save_uploaded_file, delete_files
-from modules.preprocess_factory import PreprocessPipeline
+import ast
+import os
 from modules.chat_factory import ChatWithAssistant
-from modules.storage_factory import Data
-from modules.utils import create_name
+from modules.pdf_print2 import PDF
+from modules.utils import build_json, save_results
+from config import Config
+import time
+import json
+import shutil
+import io
+from unidecode import unidecode
+
+try:
+    os.makedirs(Config.DOWNLOAD_DIR, exist_ok=True)
+except Exception as e:
+    print(f"Failed to create directory {Config.DOWNLOAD_DIR}: {e}")
+
+try:
+    os.makedirs(Config.UPLOAD_DIR, exist_ok=True)
+except Exception as e:
+    print(f"Failed to create directory {Config.UPLOAD_DIR}: {e}")
+
+def load_file(path):
+    try:
+        data = None
+        with open(path, "r", encoding="utf-8") as file:
+            data = file.read()
+            return data
+    except FileNotFoundError:
+        return data
+    except PermissionError:
+        return data
+
+# Function to handle the step actions
+def handle_step(step_name):
+    with st.spinner(f"Processing {step_name}..."):
+        tasks=steps[step_name]
+        # Iterate through the steps defined in session state
+        for task in tasks:
+            item = st.session_state['steps'][task]
+            instructions=""
+            input=f"The company you are reporting on is {st.session_state['company']}"
+            if "question" in list(item.keys()):
+                input = input+'. '+str(item["question"])
+            if 'tools' in list(item.keys()):
+                tool = item["tools"]
+            if 'instruction' in list(item.keys()):
+                instructions=item['instruction']
+            response = conversation_pipeline.run_assistant(
+                st.session_state['thread'],
+                input,
+                instructions=instructions,
+                role="user"
+            )
+            save_as ={task:{'content':str(response),'details':item}}
+            st.session_state['steps_completed'].append(save_as)
+            st.session_state['thread'] = conversation_pipeline.create_thread("Hi")
+            time.sleep(5)
+        st.session_state['show_output'] = True
+        return response
+
+def generate_report(data):
+    pdf = PDF()
+    pdf.add_page()
+    pdf.set_auto_page_break(auto=True, margin=15)
+
+    # Set a default font before adding any content
+    pdf.set_font('Arial', size=12)
+
+    report_data = build_json(data,st.session_state['company'])
+    for chapter, chapter_data in report_data.items():
+        pdf.chapter_title(chapter, chapter_data['title'])
+        if 'content' in chapter_data:
+            pdf.content(chapter_data['content'])
+
+        if 'subsections' in chapter_data:
+            for subsection, subsection_data in chapter_data['subsections'].items():
+                pdf.subchapter_title(subsection, subsection_data['title'])
+                if 'content' in subsection_data:
+                    pdf.content(subsection_data['content'])
+
+                if 'questions' in subsection_data:
+                    for subsubsection, question_data in subsection_data['questions'].items():
+                        pdf.question(subsubsection, question_data['question'])
+                        pdf.content(question_data['content'])
+    # Save PDF
+    filename = f"ESG_{st.session_state['company']}_Report"
+    pdf.output("dynamic_report.pdf")
+    # Save PDF to a BytesIO object
+    pdf_file = io.BytesIO()
+    pdf.output(pdf_file)
+    pdf_file.seek(0)
+    return pdf_file
+# Initialize the conversational pipeline
+@st.cache_resource
+def load_pipeline():
+    return ChatWithAssistant()
 
 
-os.makedirs(Config.UPLOAD_DIR, exist_ok=True)
-os.makedirs(Config.EMB_DIR, exist_ok=True)
+conversation_pipeline = load_pipeline()
+steps = {'do_research':['step_0'],
+         'collect_data':['step_2','step_3'],#,'step_4','step_5','step_6','step_7','step_8','step_9','step_10'], #'step_11','step_12','step_13','step_14','step_15','step_16','step_17','step_18','step_19','step_20'],
+         'generate_report':['step_5']}
 
-pipe=PreprocessPipeline(Config.MODEL_EMB)
-user = Data("user")
-asst = ChatWithAssistant()
+# Initialize session state for the chat
+if "conversation" not in st.session_state:
+    st.session_state.conversation = None
+if "chat_history" not in st.session_state:
+    st.session_state.chat_history = []
+if 'file_uploaded' not in st.session_state:
+    st.session_state['file_uploaded'] = False
+if "thread" not in st.session_state:
+    st.session_state['thread'] = conversation_pipeline.create_thread("Hi")
+if 'context' not in st.session_state:
+    st.session_state['context'] = load_file(conversation_pipeline.context_path)
+if 'steps' not in st.session_state:
+    st.session_state['steps'] = ast.literal_eval(load_file(conversation_pipeline.steps_path))
+if 'questions' not in st.session_state:
+    st.session_state['questions'] = ast.literal_eval(load_file(conversation_pipeline.questions_path))
+    st.session_state['file_uploaded'] = True
+# Page layout
+if 'current_page' not in st.session_state:
+    st.session_state['current_page'] = 'input_page'
+# Initialise show output
+if 'show_output' not in st.session_state:
+    st.session_state['show_output']=False
+if 'steps_completed' not in st.session_state:
+    st.session_state['steps_completed']=[]
+# Input page
+if st.session_state['current_page'] == 'input_page':
+    st.title("ESG Report Tool")
 
-# Simulate a long-running task
-def create_thread_and_save(doc_name):
-    thread_id = asst.create_thread()
-    user.save_object(object={doc_name: thread_id})
+    # Input text box for company name or web address
+    company_input = st.text_input("Enter Company Name or Web Address:")
+    st.session_state['company'] = company_input
 
-def delete_chat(doc_name):
-    upload_path = os.path.join(Config.UPLOAD_DIR,doc_name,".pdf")
-    emb_path = os.path.join(Config.EMB_DIR,Config.VECTORSTORE_NAME,create_name(doc_name))
-
-    # Find the objects for the user
-    tmp = user.get_objects()
-    # If the thread exist for the doc, delete it
-    if tmp[doc_name]:
-        try:
-            asst.delete_thread(tmp[doc_name])
-        except:
-            pass
-    # Delete the thread entry from the list of docs
-    object = user.remove_object(doc_name)
-    # Delete the document from the upload folder and the embeddings folder
-    # if os.path.exists(upload_path):
-    #     os.remove(upload_path)
-    # if os.path.exists(emb_path):
-    #     os.remove(emb_path)
-    return f"Deleted chat for {doc_name}"
-
-def load_chat(filename):
-    file_path = os.path.join(Config.UPLOAD_DIR, filename)
-    if os.path.exists(file_path):
-        return f"Chat loaded for {filename}"
-    return "File not found"
-
-# Streamlit UI
-st.title("PDF Chat Application")
-
-# Sidebar with tabs
-with st.sidebar:
-    tab = st.radio("Select Tab", ["Load File", "Load Chat"])
-
-if tab == "Load File":
-    st.header("Upload and Process File")
-    uploaded_files = st.file_uploader("Choose a file",
-                                     type=["pdf"],  # You can restrict types (e.g., ["png", "jpg", "pdf"])
-                                     accept_multiple_files=True,
-                                     )
-
-    file_names = []
-    file_paths = []
-    if uploaded_files:
-        for uploaded_file in uploaded_files:
-            file_path = save_uploaded_file(uploaded_file)
-            file_paths.append(file_path)
-            st.success(f"Uploaded: {uploaded_file.name}")
-
-        if st.button("Process Files", key="process_files"):
-            with st.spinner("Processing..."):
-                for idx, file_path in enumerate(file_paths):
-                    result = pipe.process_documents(file_path)
-                    doc_name = create_name(file_path)
-                    create_thread_and_save(doc_name=doc_name)
-                    st.success(f"Processed: {os.path.basename(file_path)}")
-
-elif tab == "Load Chat":
-    st.header("Load Chat")
-    if st.button("Refresh", key="refresh_docs"):
-        st.rerun()
-
-    def display_docs():
-        chats = user.get_objects()
-        if chats:
-            for doc,chat in chats.items():
-                col1, col2, col3 = st.columns([3, 1,1])
-                col1.text(doc)
-                unique_key = doc
-                if col2.button("Load Chat", key=f"load_chat_{unique_key}"):
-                    message = load_chat(doc)
-                    st.info(message)
-                if col3.button("Delete Chat", key=f"delete_chat_{unique_key}"):
-                    message = delete_chat(doc)
-                    st.warning(message)
+    # Start button
+    if st.button("Start"):
+        if company_input:
+            st.session_state['current_page'] = 'action_page'
+            st.rerun()
         else:
-            st.warning("No documents available in the docs folder.")
+            st.warning("Please enter a company name or web address.")
 
-    display_docs()
+# Action page
+if st.session_state['current_page'] == 'action_page':
+
+    # Back button at the top right
+    top_right_col = st.columns([9, 1])
+    with top_right_col[1]:
+        # Back button to restart
+        if st.button("Back"):
+            if st.session_state['show_output'] == True:
+                st.session_state['current_page'] = 'action_page'
+            else:
+                st.session_state['current_page'] = 'input_page'
+            st.session_state['steps_completed'] = []
+            st.session_state['show_output'] = False
+            st.rerun()
+
+    st.title(f"Working on company {st.session_state['company']}")
+
+    # Sidebar for actions
+    with st.sidebar:
+        st.subheader("Actions")
+        if st.button("Do Research"):
+            handle_step("do_research")
+            # Delete all files and subdirectories
+            try:
+                shutil.rmtree(Config.DOWNLOAD_DIR)
+                os.makedirs(Config.DOWNLOAD_DIR)
+                print(f"Cleared: {Config.DOWNLOAD_DIR}")
+            except Exception as e:
+                print(f"Failed to clear directory {Config.DOWNLOAD_DIR}: {e}")
+
+        if st.button("Collect Data"):
+            handle_step("collect_data")
+
+        if st.button("Generate Report"):
+            st.session_state['generate_report'] = False
+            pdf_file = generate_report(st.session_state['steps_completed'])
+            if pdf_file:
+                st.session_state['generate_report'] = True
+                st.download_button(
+                    label="Download PDF",
+                    data=pdf_file,
+                    file_name="dynamic_report.pdf",
+                    mime="application/pdf",
+                )
+            else:
+                st.error("Report generation failed.")
+
+    # # Display container for the latest output
+    # if st.session_state['show_output']:
+    #     st.subheader("Process Output")
+    #     last_step = st.session_state['steps_completed'][-1]
+    #     st.info(f"{'last_step'}: {last_step}")
+
+    # Display completed steps
+    if st.session_state['steps_completed']:
+        st.subheader("Steps Completed")
+        for step in st.session_state['steps_completed']:
+            st.write(step)
+
+        json_string = json.dumps(st.session_state['steps_completed'], indent=4)
+
+        # Add a download button
+        st.download_button(
+            label="Download Results",
+            data=json_string,
+            file_name="completed_steps.json",
+            mime="application/json",
+        )
+
+
+

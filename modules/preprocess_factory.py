@@ -4,7 +4,7 @@ from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTex
 from langchain_community.document_loaders.pdf import PyPDFLoader
 from config import Config
 import os
-from modules.utils import create_name
+from modules.utils_old import create_name
 
 class PreprocessPipeline:
     def __init__(self,emb_model):

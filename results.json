@@ -1,0 +1,392 @@
+{
+    "kind": "customsearch#search",
+    "url": {
+        "type": "application/json",
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+        "request": [
+            {
+                "title": "Google Custom Search - Solvay strategies adapt climate change filetype:pdf",
+                "totalResults": "25200",
+                "searchTerms": "Solvay strategies adapt climate change filetype:pdf",
+                "count": 10,
+                "startIndex": 1,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "5619fdaa5a2424345"
+            }
+        ],
+        "nextPage": [
+            {
+                "title": "Google Custom Search - Solvay strategies adapt climate change filetype:pdf",
+                "totalResults": "25200",
+                "searchTerms": "Solvay strategies adapt climate change filetype:pdf",
+                "count": 10,
+                "startIndex": 11,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "5619fdaa5a2424345"
+            }
+        ]
+    },
+    "context": {
+        "title": "bot_search"
+    },
+    "searchInformation": {
+        "searchTime": 0.318142,
+        "formattedSearchTime": "0.32",
+        "totalResults": "25200",
+        "formattedTotalResults": "25,200"
+    },
+    "items": [
+        {
+            "kind": "customsearch#result",
+            "title": "Solvay 2022 Annual Integrated Report (PDF",
+            "htmlTitle": "<b>Solvay</b> 2022 Annual Integrated Report (PDF",
+            "link": "https://www.solvay.com/sites/g/files/srpend616/files/2023-05/solvay-2022-annual-integrated-report.pdf",
+            "displayLink": "www.solvay.com",
+            "snippet": "May 9, 2023 ... strategy enabled us to overcome the challenging macroeconomic environment and deliver outstanding results. ... climate change. As part of our.",
+            "htmlSnippet": "May 9, 2023 <b>...</b> <b>strategy</b> enabled us to overcome the challenging macroeconomic environment and deliver outstanding results. ... <b>climate change</b>. As part of our.",
+            "formattedUrl": "https://www.solvay.com/sites/.../solvay-2022-annual-integrated-report.pdf",
+            "htmlFormattedUrl": "https://www.<b>solvay</b>.com/sites/.../<b>solvay</b>-2022-annual-integrated-report.pdf",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKI9r7UH07IHT9J_QqkEVU7mm5eshWRWNJUv1MsCJSHDQR2KzOXD_FcXQ&s",
+                        "width": "270",
+                        "height": "187"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20230510160404+02'00'",
+                        "creationdate": "D:20230405171647+02'00'",
+                        "creator": "Adobe InDesign 18.2 (Macintosh)",
+                        "producer": "Adobe PDF Library 17.0"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///c9b4a6eef46363bac2c1e1e4b6648fee0ca7876dbb16d7e62192bdc9241fe5bb"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "TCFD Chemical Sector Preparer Forum - Climate-related financial ...",
+            "htmlTitle": "TCFD Chemical Sector Preparer Forum - <b>Climate</b>-related financial ...",
+            "link": "https://docs.wbcsd.org/2019/07/WBCSD_TCFD_Chemical_Sector_Preparer_Forum.pdf",
+            "displayLink": "docs.wbcsd.org",
+            "snippet": "Jul 2, 2019 ... \u00a9 Contribute to adapting to the climate change impacts. \u2462 Contribute to ... Strategies that embed climate change and clear and transparent.",
+            "htmlSnippet": "Jul 2, 2019 <b>...</b> \u00a9 Contribute to <b>adapting</b> to the <b>climate change</b> impacts. \u2462 Contribute to ... <b>Strategies</b> that embed climate change and clear and transparent.",
+            "formattedUrl": "https://docs.wbcsd.org/.../WBCSD_TCFD_Chemical_Sector_Preparer_Foru...",
+            "htmlFormattedUrl": "https://docs.wbcsd.org/.../WBCSD_TCFD_Chemical_Sector_Preparer_Foru...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4_qnh8gz35ZOSUwfIrScRu30dAjZqjEWLMGkL-uQNbAg5DHaDX--HPC8&s",
+                        "width": "220",
+                        "height": "229"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20190716071814+01'00'",
+                        "creationdate": "D:20190715163752+02'00'",
+                        "creator": "Adobe InDesign 14.0 (Macintosh)",
+                        "producer": "Adobe PDF Library 15.0",
+                        "title": "TCFD Chemical Sector Preparer Forum - Climate-related financial disclosure by chemical sector companies: Implementing the TCFD recommendations"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///48a20257f173ee22630009e682c47b4b1d5cdc29c06c54f958864726559e9e2d"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Q3 2019 RESULTS & STRATEGIC REVIEW",
+            "htmlTitle": "Q3 2019 RESULTS &amp; <b>STRATEGIC</b> REVIEW",
+            "link": "https://www.solvay.com/sites/g/files/srpend616/files/2019-11/Solvay%202019_StrategyReview_Presentation_0.pdf",
+            "displayLink": "www.solvay.com",
+            "snippet": "Nov 7, 2019 ... climate change, resource efficiency and improve quality of life ... \u2022 Solvay + Rhodia + Cytec + \u2026 LEGACY SOLVAY. Single purpose.",
+            "htmlSnippet": "Nov 7, 2019 <b>...</b> <b>climate change</b>, resource efficiency and improve quality of life ... \u2022 <b>Solvay</b> + <b>Rhodia</b> + Cytec + \u2026 LEGACY <b>SOLVAY</b>. Single purpose.",
+            "formattedUrl": "https://www.solvay.com/.../Solvay%202019_StrategyReview_Presentation_...",
+            "htmlFormattedUrl": "https://www.<b>solvay</b>.com/.../<b>Solvay</b>%202019_StrategyReview_Presentation_...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpS0ILAA5ES_xykt0qd1UGUl4CFRaR_Hhnohzdrz1oYaizhtdm5u4tnJaJ&s",
+                        "width": "281",
+                        "height": "179"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20191107132431+01'00'",
+                        "creationdate": "D:20191107132431+01'00'",
+                        "creator": "Microsoft\u00ae PowerPoint\u00ae 2013",
+                        "author": "Rose, Andrea S.",
+                        "producer": "Microsoft\u00ae PowerPoint\u00ae 2013",
+                        "title": "PowerPoint Presentation"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///6a4aadd246b8bc20ec13b4975cc04f9df4c04b94291195356a8a203dcf8ea725"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "climate-report-veolia-2024.pdf",
+            "htmlTitle": "<b>climate</b>-report-veolia-2024.pdf",
+            "link": "https://www.veolia.com/sites/g/files/dvc4206/files/document/2024/05/climate-report-veolia-2024.pdf",
+            "displayLink": "www.veolia.com",
+            "snippet": "Feb 1, 2024 ... We foreground our decarbonization strategy, emphasizing the importance of each initiative in the fight against climate change.",
+            "htmlSnippet": "Feb 1, 2024 <b>...</b> We foreground our decarbonization <b>strategy</b>, emphasizing the importance of each initiative in the fight against <b>climate change</b>.",
+            "formattedUrl": "https://www.veolia.com/sites/g/files/.../05/climate-report-veolia-2024.pdf",
+            "htmlFormattedUrl": "https://www.veolia.com/sites/g/files/.../05/<b>climate</b>-report-veolia-2024.pdf",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIx7OBisRID6UDC4kMdvkdz50T8kYxaFSFSceQwvCEBR08UuW77uSbWL6T&s",
+                        "width": "275",
+                        "height": "183"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20240412114208+02'00'",
+                        "creationdate": "D:20240412114208+02'00'"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///f26b3dab05c9cb67f56bd0f37b3b549f80891e1b1cb70a200ef62eb7ae071362"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Solvay full year 2020 results",
+            "htmlTitle": "<b>Solvay</b> full year 2020 results",
+            "link": "https://www.solvay.com/sites/g/files/srpend221/files/2021-02/2020Q4-PR%20ENG-final.pdf",
+            "displayLink": "www.solvay.com",
+            "snippet": "Feb 24, 2021 ... Solvay's ambitions center around three main pillars, including climate change, resource scarcity and promoting a better life. These are\u00a0...",
+            "htmlSnippet": "Feb 24, 2021 <b>...</b> <b>Solvay&#39;s</b> ambitions center around three main pillars, including <b>climate change</b>, resource scarcity and promoting a better life. These are&nbsp;...",
+            "formattedUrl": "https://www.solvay.com/sites/g/files/...02/2020Q4-PR%20ENG-final.pdf",
+            "htmlFormattedUrl": "https://www.<b>solvay</b>.com/sites/g/files/...02/2020Q4-PR%20ENG-final.pdf",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQno8KkLlw4DPi_DDo0Lyle2IvWqzpBnaZITkWVi0FdbEUcatiaTBD6i7w&s",
+                        "width": "225",
+                        "height": "225"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20210223174815+01'00'",
+                        "creationdate": "D:20210223174815+01'00'",
+                        "producer": "Skia/PDF m90"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///6d83c56430eaa756a07a57675ffe656129fdc86c13e42800c04fee96e3bf4faf"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "How to embark your company upon its climate change adaptation ...",
+            "htmlTitle": "How to embark your company upon its <b>climate change adaptation</b> ...",
+            "link": "https://www.wbcsd.org/wp-content/uploads/2024/04/guide-climate-change-adaptation.pdf",
+            "displayLink": "www.wbcsd.org",
+            "snippet": "In 2020, the chemicals group. Solvay set a global target of reducing ... climate change adaptation strategies. A comparative table of methods and a\u00a0...",
+            "htmlSnippet": "In 2020, the chemicals group. <b>Solvay</b> set a global target of reducing ... <b>climate change adaptation strategies</b>. A comparative table of methods and a&nbsp;...",
+            "formattedUrl": "https://www.wbcsd.org/wp-content/.../guide-climate-change-adaptation.pdf",
+            "htmlFormattedUrl": "https://www.wbcsd.org/wp-content/.../guide-<b>climate</b>-<b>change</b>-<b>adapt</b>ation.pdf",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmpmFt0HcIgTA1VRTiF2pF6gJJCqiUgEKlY51VuQp7JuihzD2DYyLXBzmO&s",
+                        "width": "274",
+                        "height": "184"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20240312182034+01'00'",
+                        "creationdate": "D:20240312181943+01'00'",
+                        "creator": "Adobe InDesign 15.0 (Macintosh)",
+                        "producer": "Adobe PDF Library 15.0"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///b72285e17c4bca01877a280ce0fd871955e3214ba122fe5e5a3b9947d9a3b597"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "2019 Annual Integrated Report",
+            "htmlTitle": "2019 Annual Integrated Report",
+            "link": "https://www.solvay.com/sites/g/files/srpend221/files/2020-03/en_final_web_optimized.pdf",
+            "displayLink": "www.solvay.com",
+            "snippet": "Jan 1, 2020 ... strategy will drive growth, cash and returns. ReInventing Solvay ... We also made step changes on three fronts \u2013. Strategy, Structure and Culture.",
+            "htmlSnippet": "Jan 1, 2020 <b>...</b> <b>strategy</b> will drive growth, cash and returns. ReInventing <b>Solvay</b> ... We also made step <b>changes</b> on three fronts \u2013. <b>Strategy</b>, Structure and Culture.",
+            "formattedUrl": "https://www.solvay.com/sites/g/files/.../files/.../en_final_web_optimized.pdf",
+            "htmlFormattedUrl": "https://www.<b>solvay</b>.com/sites/g/files/.../files/.../en_final_web_optimized.pdf",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcsIjLY7gpzfPmEzpT6Ip1WMgk76zMmhwu2eeC_hwMDBGgLvpdVvEF9V0&s",
+                        "width": "237",
+                        "height": "213"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20200330111632+02'00'",
+                        "creationdate": "D:20200330111632+02'00'"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///b69977ea012622fdeb039088f2254693f21385d4336ffc80842d209e9a3e2058"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "CLIMATE REPORT APRIL 2021",
+            "htmlTitle": "<b>CLIMATE</b> REPORT APRIL 2021",
+            "link": "https://www.renaultgroup.com/wp-content/uploads/2021/04/220421_climate-report-renault-group_8mb.pdf",
+            "displayLink": "www.renaultgroup.com",
+            "snippet": "Apr 30, 2021 ... a priority for Renault Group's climate strategy ... knowledge on climate change, its causes, impacts and options for adaptation and mitigation.",
+            "htmlSnippet": "Apr 30, 2021 <b>...</b> a priority for Renault Group&#39;s climate <b>strategy</b> ... knowledge on <b>climate change</b>, its causes, impacts and options for <b>adaptation</b> and mitigation.",
+            "formattedUrl": "https://www.renaultgroup.com/.../220421_climate-report-renault-group_8...",
+            "htmlFormattedUrl": "https://www.renaultgroup.com/.../220421_<b>climate</b>-report-renault-group_8...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqtayBFTuNy_Z4BdOwOjhWpBJ_ITIqoHWmt3MqlS_FUuMdxpVT3yVIAj8s&s",
+                        "width": "267",
+                        "height": "189"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20210422150520+02'00'",
+                        "creationdate": "D:20210422150433+02'00'",
+                        "creator": "Adobe InDesign 16.1 (Macintosh)",
+                        "producer": "Adobe PDF Library 15.0"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///7a635ab062f6b047d5d1074b4f108c904d3d4dd1c9d5ee23d0b26224347797f6"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Solvay 2020 Annual Report.pdf",
+            "htmlTitle": "<b>Solvay</b> 2020 Annual Report.pdf",
+            "link": "https://www.solvay.com/sites/g/files/srpend221/files/2021-03/Solvay%202020%20Annual%20Report.pdf",
+            "displayLink": "www.solvay.com",
+            "snippet": "... adapt. We took immediate measures to rein in our own production and ... climate, resources and better life, which we presented to investors at a\u00a0...",
+            "htmlSnippet": "... <b>adapt</b>. We took immediate measures to rein in our own production and ... <b>climate</b>, resources and better life, which we presented to investors at a&nbsp;...",
+            "formattedUrl": "https://www.solvay.com/.../g/.../Solvay%202020%20Annual%20Report.pdf",
+            "htmlFormattedUrl": "https://www.<b>solvay</b>.com/.../g/.../<b>Solvay</b>%202020%20Annual%20Report.pdf",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu-zML_kHvglQnDFITtcd1kKlPlqJoq5xwijnhLveqWhEyxskah5AFSJYf&s",
+                        "width": "250",
+                        "height": "202"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20210331135628+02'00'",
+                        "creationdate": "D:20210331135355+02'00'",
+                        "creator": "Adobe InDesign 15.1 (Macintosh)",
+                        "producer": "Adobe PDF Library 15.0"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///fabbf1ed7587171f8159aca4a93f4aeb913099e14fde04283ee3ec7eb3ca51fc"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Solvay Overview for Investors",
+            "htmlTitle": "<b>Solvay</b> Overview for Investors",
+            "link": "https://www.syensqo.com/sites/g/files/alwlxe161/files/2023-11/Solvay-Overview-for-Investors.pdf",
+            "displayLink": "www.syensqo.com",
+            "snippet": "Nov 3, 2023 ... helping the fight against global climate change of fuel cell electric vehicles by 2030. Millions. 100+. GW of global green hydrogen production\u00a0...",
+            "htmlSnippet": "Nov 3, 2023 <b>...</b> helping the fight against global <b>climate change</b> of fuel cell electric vehicles by 2030. Millions. 100+. GW of global green hydrogen production&nbsp;...",
+            "formattedUrl": "https://www.syensqo.com/sites/g/files/.../Solvay-Overview-for-Investors.pdf",
+            "htmlFormattedUrl": "https://www.syensqo.com/sites/g/files/.../<b>Solvay</b>-Overview-for-Investors.pdf",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZS1-Xg_gsxPN9kBfNkho5km5WrEB49zyKKwwpN2mIRmgvkZqF0IzwK5o&s",
+                        "width": "275",
+                        "height": "183"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "creator": "Google",
+                        "title": "Solvay Overview for Investors"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///26e71afd604c1dfb12e937d4fabe8f461c3f9e777c68768b4b79bfa59f07c7b6"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        }
+    ]
+}

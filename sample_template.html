@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ report_title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #333;
+            text-decoration: underline;
+            text-align: center;
+        }
+        h2, h3, h4 {
+            color: #333;
+            text-decoration: underline;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .rating {
+            font-weight: bold;
+            color: #28a745;
+        }
+        .thumbnail {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="{{ thumbnail_url }}" alt="Thumbnail" class="thumbnail">
+        <h1>{{ report_title }}</h1>
+    </header>
+
+    <!-- Company Introduction -->
+    <section class="section">
+        <h2>{{ introduction_title }}</h2>
+        <p>{{ introduction_text }}</p>
+    </section>
+
+    <!-- Categories and Standards -->
+    <section class="section">
+        <h2>{{ categories_title }}</h2>
+
+        {% for category in categories %}
+        <div>
+            <h3>{{ category.name }}</h3>
+            {% for standard in category.standards %}
+            <h4>{{ standard.name }}</h4>
+            <p>Findings: {{ standard.findings }}</p>
+            <h5>Rating and Justification</h5>
+            <p class="rating">Rating: {{ standard.rating }}</p>
+            <p>Justification: {{ standard.justification }}</p>
+            <ul>
+                {% for source in standard.sources %}
+                <li><a href="{{ source.url }}" target="_blank">{{ source.name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </section>
+
+    <!-- Compliance Table -->
+    <section class="section">
+        <h2>{{ compliance_table_title }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Rating</th>
+                    <th>Justification</th>
+                    <th>Sources</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in compliance_table %}
+                <tr>
+                    <td>{{ row.question }}</td>
+                    <td>{{ row.rating }}</td>
+                    <td>{{ row.justification }}</td>
+                    <td>
+                        {% for source in row.sources %}
+                        <a href="{{ source.url }}" target="_blank">{{ source.name }}</a><br>
+                        {% endfor %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>

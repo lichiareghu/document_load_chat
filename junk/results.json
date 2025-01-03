@@ -1,0 +1,234 @@
+{
+    "kind": "customsearch#search",
+    "url": {
+        "type": "application/json",
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+        "request": [
+            {
+                "title": "Google Custom Search - Solvay company ESRS compliance report filetype:pdf",
+                "totalResults": "220",
+                "searchTerms": "Solvay company ESRS compliance report filetype:pdf",
+                "count": 5,
+                "startIndex": 1,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "5619fdaa5a2424345"
+            }
+        ],
+        "nextPage": [
+            {
+                "title": "Google Custom Search - Solvay company ESRS compliance report filetype:pdf",
+                "totalResults": "220",
+                "searchTerms": "Solvay company ESRS compliance report filetype:pdf",
+                "count": 5,
+                "startIndex": 6,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "5619fdaa5a2424345"
+            }
+        ]
+    },
+    "context": {
+        "title": "bot_search"
+    },
+    "searchInformation": {
+        "searchTime": 0.146161,
+        "formattedSearchTime": "0.15",
+        "totalResults": "220",
+        "formattedTotalResults": "220"
+    },
+    "items": [
+        {
+            "kind": "customsearch#result",
+            "title": "Solvay 2022 Annual Integrated Report (PDF",
+            "htmlTitle": "<b>Solvay</b> 2022 Annual Integrated <b>Report</b> (PDF",
+            "link": "https://www.solvay.com/sites/g/files/srpend616/files/2023-05/solvay-2022-annual-integrated-report.pdf",
+            "displayLink": "www.solvay.com",
+            "snippet": "May 9, 2023 ... As part of our. Corporate Citizenship program supporting projects in www.nanokexpedition.be education, innovation and sustainability, Solvay was\u00a0...",
+            "htmlSnippet": "May 9, 2023 <b>...</b> As part of our. <b>Corporate</b> Citizenship program supporting projects in www.nanokexpedition.be education, innovation and sustainability, <b>Solvay</b> was&nbsp;...",
+            "formattedUrl": "https://www.solvay.com/sites/.../solvay-2022-annual-integrated-report.pdf",
+            "htmlFormattedUrl": "https://www.<b>solvay</b>.com/sites/.../<b>solvay</b>-2022-annual-integrated-<b>report</b>.pdf",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKI9r7UH07IHT9J_QqkEVU7mm5eshWRWNJUv1MsCJSHDQR2KzOXD_FcXQ&s",
+                        "width": "270",
+                        "height": "187"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20230510160404+02'00'",
+                        "creationdate": "D:20230405171647+02'00'",
+                        "creator": "Adobe InDesign 18.2 (Macintosh)",
+                        "producer": "Adobe PDF Library 17.0"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///c9b4a6eef46363bac2c1e1e4b6648fee0ca7876dbb16d7e62192bdc9241fe5bb"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "ESMA32-1283113657-1041 Report - Disclosures of Climate ...",
+            "htmlTitle": "ESMA32-1283113657-1041 <b>Report</b> - Disclosures of Climate ...",
+            "link": "https://www.esma.europa.eu/sites/default/files/2023-10/ESMA32-1283113657-1041_Report_-_Disclosures_of_Climate_Related_Matters_in_the_Financial_Statements.pdf",
+            "displayLink": "www.esma.europa.eu",
+            "snippet": "Oct 25, 2023 ... Solvay SA, a chemicals company, described its accounting policies regarding to the treatment of CO2 emission rights, presenting these as\u00a0...",
+            "htmlSnippet": "Oct 25, 2023 <b>...</b> <b>Solvay</b> SA, a <b>chemicals company</b>, described its accounting policies regarding to the treatment of CO2 emission rights, presenting these as&nbsp;...",
+            "formattedUrl": "https://www.esma.europa.eu/.../ESMA32-1283113657-1041_Report_-_Dis...",
+            "htmlFormattedUrl": "https://www.esma.europa.eu/.../ESMA32-1283113657-1041_<b>Report</b>_-_Dis...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsBXkAb-M-uXTTvd0gkIt7C0eP4OsVJLhbaq7Kc5SeCkOrQQBw8o46UEY&s",
+                        "width": "244",
+                        "height": "207"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "esmatemplatestopic": "58;#Report|066a9501-23d0-4103-814a-86d99d41b931",
+                        "creationdate": "D:20231025094924+02'00'",
+                        "creator": "Acrobat PDFMaker 11 for Word",
+                        "esmatemplatesconfidentialitylevel": "6;#Regular|07f1e362-856b-423d-bea6-a14079762141",
+                        "_dlc_dociditemguid": "7523fba6-326d-46b3-be5c-29b6d228acb4",
+                        "author": "ESMA",
+                        "documenttype": "69;#Report|78753201-1e9e-4a21-a088-6ff602b5c999",
+                        "title": "ESMA32-1283113657-1041 Report - Disclosures of Climate Related Matters in the Financial Statements",
+                        "confidentialitylevel": "6;#Regular|07f1e362-856b-423d-bea6-a14079762141",
+                        "contenttypeid": "0x010100F8E33E82BC11F442B9144196261F518C010C0096649833A3EE3B44A7B710FF1EE12E5C",
+                        "_docset_nomedatatasyncrequired": "False",
+                        "moddate": "D:20231025103848+02'00'",
+                        "producer": "Adobe PDF Library 11.0",
+                        "n84bf37b4eaf4fd99e887816221de8a8": "EN|f7e7f686-dfa7-4032-a218-a5881e990598",
+                        "mf50acab3f6949599688191e8740e810": "Regular|07f1e362-856b-423d-bea6-a14079762141",
+                        "teamtopic": "52;#Other Work|f2ece7c8-ec30-468f-9bb2-0c5bf74744e9",
+                        "order": "52100.000000",
+                        "teamname": "5"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///200710a684f1ce26351e36a1778d235f2aae653256c3eacaab7a9b6029627a53"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Mastering the Essential",
+            "htmlTitle": "Mastering the Essential",
+            "link": "https://www.solvay.com/sites/g/files/srpend616/files/2024-05/Solvay_2023%20Annual%20Integrated%20Report%20%282%29.pdf",
+            "displayLink": "www.solvay.com",
+            "snippet": "May 9, 2023 ... ... Solvay Board, I have come to know the company and its assets well. ... To serve our customers. SOLVAY 2023 ANNUAL INTEGRATED REPORT. Page 5\u00a0...",
+            "htmlSnippet": "May 9, 2023 <b>...</b> ... <b>Solvay</b> Board, I have come to know the <b>company</b> and its assets well. ... To serve our customers. <b>SOLVAY</b> 2023 ANNUAL INTEGRATED <b>REPORT</b>. Page 5&nbsp;...",
+            "formattedUrl": "https://www.solvay.com/.../Solvay_2023%20Annual%20Integrated%20Rep...",
+            "htmlFormattedUrl": "https://www.<b>solvay</b>.com/.../<b>Solvay</b>_2023%20Annual%20Integrated%20<b>Rep</b>...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtMJXwD5sSlEgBO5jf4I46K_flkN25lhgoiRM3emi1DR1lLS_Ry3EUKwI&s",
+                        "width": "254",
+                        "height": "199"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20240524144143+02'00'",
+                        "creationdate": "D:20240524122307+02'00'",
+                        "creator": "Adobe InDesign 19.4 (Macintosh)",
+                        "producer": "Adobe PDF Library 17.0"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///26acc9d9a7c05a686f868bffa8d41b0ab8f45c1a16160b4779d01843c55fa62a"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Outreach-Veranstaltung \u201eESRS \u2013 Europ\u00e4ische Standards zur ...",
+            "htmlTitle": "Outreach-Veranstaltung \u201e<b>ESRS</b> \u2013 Europ\u00e4ische Standards zur ...",
+            "link": "https://www.efrag.org/Assets/Download?assetUrl=%2Fsites%2Fwebpublishing%2FSiteAssets%2FGermany%2520slides%2520ESRS.pdf",
+            "displayLink": "www.efrag.org",
+            "snippet": "Jun 10, 2022 ... If they decide to do so, the corporate governance statement needs to include a reference to the undertaking's sustainability reporting, and the\u00a0...",
+            "htmlSnippet": "Jun 10, 2022 <b>...</b> If they decide to do so, the <b>corporate</b> governance statement needs to include a reference to the undertaking&#39;s sustainability <b>reporting</b>, and the&nbsp;...",
+            "formattedUrl": "https://www.efrag.org/.../Download?...%2Fsites%2Fwebpublishing%2FSite...",
+            "htmlFormattedUrl": "https://www.efrag.org/.../Download?...%2Fsites%2Fwebpublishing%2FSite...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuLw31Gd_vhsN20LQSoihQticsKJtGLp3nIuMK2qKpQ62pWIWQDUy-CJk&s",
+                        "width": "259",
+                        "height": "194"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20220719090401Z",
+                        "producer": "iLovePDF"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///6c436cdac098af0cabafe55b212a29607875cfee0073722818ee22f442a2a17c"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Von der Tradition zur Transformation",
+            "htmlTitle": "Von der Tradition zur Transformation",
+            "link": "https://www.kandelium.com/fileadmin/downloads/Kandelium_from_tradition_to_transformation.pdf",
+            "displayLink": "www.kandelium.com",
+            "snippet": "In the final fifth step, the roadmap for the transformation of our CSRD reporting towards full ESRS compliance is drawn up. This enables us to organise our\u00a0...",
+            "htmlSnippet": "In the final fifth step, the roadmap for the transformation of our CSRD <b>reporting</b> towards full <b>ESRS compliance</b> is drawn up. This enables us to organise our&nbsp;...",
+            "formattedUrl": "https://www.kandelium.com/.../Kandelium_from_tradition_to_transformati...",
+            "htmlFormattedUrl": "https://www.kandelium.com/.../Kandelium_from_tradition_to_transformati...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmZokcogATYZMzDRdCAUdILCOxZeOSl6c0IMz3SFZyFK9aFU8AynDI-KH7&s",
+                        "width": "230",
+                        "height": "219"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "moddate": "D:20240422165828+02'00'",
+                        "creationdate": "D:20240422165828+02'00'",
+                        "creator": "Microsoft\u00ae PowerPoint\u00ae f\u00fcr Microsoft 365",
+                        "producer": "Microsoft\u00ae PowerPoint\u00ae f\u00fcr Microsoft 365",
+                        "title": "Von der Tradition zur Transformation"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "x-raw-image:///8da55089b07339f06cdbd6b36c35d54dc5e3f7f5247f206c6d8dadd1b2930d67"
+                    }
+                ]
+            },
+            "mime": "application/pdf",
+            "fileFormat": "PDF/Adobe Acrobat"
+        }
+    ]
+}

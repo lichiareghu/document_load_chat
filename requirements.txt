@@ -6,5 +6,10 @@ langchain-openai
 pypdf
 faiss-cpu
 flask
-threading
-
+langchain_google_community
+chromadb
+langchain_chroma
+bs4
+html2text
+fpdf2
+unidecode

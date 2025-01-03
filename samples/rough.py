@@ -1,6 +1,6 @@
 import openai
 import streamlit as st
-from modules.chat_factory import ChatWithAssistant
+from modules.chat_factory_old import ChatWithAssistant
 import time
 import os
 from config import Config
@@ -10,7 +10,7 @@ import logging
 from modules.retreival_factory import KnowledgeRetriver, OpenAIRetriver
 from modules.vectorstore_factory import FaissVectorStore
 from modules.storage_factory import Data
-from modules.utils import create_name
+from modules.utils_old import create_name
 
 # Set up your OpenAI API key
 buddy = ChatWithAssistant()
